@@ -1,0 +1,45 @@
+@import './FilterBar/filterBar.scss';
+
+
+.landingContainer-hotels {
+  grid-area: hotels;
+}
+
+.landingContainer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(200px, auto);
+  grid-gap: 10px;
+  grid-template-areas:
+  "filterBar"
+  "hotels"
+}
+
+@media screen and (min-width: 768px) {
+  .landingContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+    "filterBar filterBar filterBar filterBar"
+    "hotels    hotels    hotels    hotels"
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .landingContainer {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    grid-gap: 10px;
+    grid-template-areas:
+    "filterBar filterBar hotels hotels hotels hotels hotels hotels"
+  }
+}
+
+
+

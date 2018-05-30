@@ -1,0 +1,65 @@
+@import '../variables.scss';
+
+.hotelDetail {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(400px, auto);
+  grid-gap: 10px;
+  font-family: $font;
+}
+
+.hotelDetail-content-image {
+  img {
+    width: 100%;
+  }
+}
+
+.hotelDetail-content {
+  padding-top:10px;
+  box-shadow: $shadow;
+  justify-self: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 10px;
+  div {
+    justify-self: center;
+  }
+}
+
+.hotelDetail-content-descrb {
+  text-align: center;
+}
+
+.hotelDetail-content-name {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.hotelDetail-room {
+  box-shadow: $shadow;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(70px, auto);
+  justify-items: center;
+  align-items: center;
+
+  button {
+    color:white;
+    background: rgb(66, 133, 0);
+    padding:10px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 50%;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hotelDetail-content {
+    width: 100%;
+  }
+}

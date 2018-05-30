@@ -1,0 +1,138 @@
+@import '../../variables.scss';
+
+.hotelCard {
+  font-family: $font;
+  box-shadow: $shadow;
+  margin-bottom: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 5px;
+  grid-template-areas:
+  "image"
+  "content"
+  "amen"
+  "pricing"
+}
+
+.hotelCard-image {
+  grid-area: image;
+  img {
+    width: 100%;
+  }
+}
+
+.hotelCard-content {
+  grid-area: content;
+  justify-self: center;
+  align-self: center;
+  padding: 12px;
+}
+
+.hotelCard-content-rating {
+  padding-top: 5px;
+}
+
+.hotelCard-content-name {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.hotelCard-content-distance {
+  font-size: 12px;
+  color: grey;
+  padding-top:5px;
+}
+
+.hotelCard-content-descrb {
+  font-size: 14px;
+  padding-top:5px;
+}
+
+.hotelCard-pricing {
+  grid-area: pricing;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 15px;
+  div {
+    justify-self: center;
+    align-self: center;
+  }
+  button {
+    color:white;
+    background: rgb(66, 133, 0);
+    padding:10px;
+    border-radius: 8px;
+    font-size: 20px;
+    width: 50%;
+    a {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+.hotelCard-amenities {
+  grid-area: amen;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 5px;
+  border-bottom: 2px solid black;
+  div {
+    justify-self: center;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hotelCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1px;
+    grid-template-areas:
+    "image content"
+    "amen  amen"
+    "pricing pricing"
+  }
+  .hotelCard-content {
+    border-bottom: none;
+    justify-self: start;
+
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .hotelCard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 1px;
+    grid-template-areas:
+    "image content amen pricing"
+  }
+
+  .hotelCard-content, .hotelCard-amenities {
+    border-bottom: none;
+    div {
+      padding: 0px;
+    }
+  }
+
+  .hotelCard-amenities {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .hotelCard-pricing {
+    grid-auto-rows: minmax(30px, auto);
+    button {
+      font-size: 18px;
+      width:76%;
+      padding: 0;
+    }
+  }
+}
+
+
