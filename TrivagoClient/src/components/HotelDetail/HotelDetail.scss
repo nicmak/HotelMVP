@@ -3,7 +3,7 @@
 .hotelDetail {
   display: grid;
   grid-template-columns: 1fr;
-  grid-auto-rows: minmax(400px, auto);
+  grid-auto-rows: minmax(170px, auto);
   grid-gap: 10px;
   font-family: $font;
 }
@@ -16,6 +16,7 @@
 
 .hotelDetail-content {
   padding-top:10px;
+  width:100%;
   box-shadow: $shadow;
   justify-self: center;
   display: grid;
@@ -58,8 +59,25 @@
   }
 }
 
+.hotelDetail-room-name {
+  font-weight: 700;
+}
+
 @media screen and (min-width: 768px) {
+  // .hotelDetail-content {
+  //   width: 100%;
+  // }
+
   .hotelDetail-content {
-    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: minmax(50px, auto);
+    align-items: center;
+  }
+
+  .hotelDetail-room {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
   }
 }

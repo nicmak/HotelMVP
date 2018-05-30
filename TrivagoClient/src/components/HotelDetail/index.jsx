@@ -82,7 +82,7 @@ class HotelDetail extends Component {
     return sortedRoom.map((room) => {
       return (
         <div className='hotelDetail-room'>
-          <div>{room.name}</div>
+          <div className='hotelDetail-room-name'>{room.name}</div>
           <div>{room.description}</div>
           <div>Max Occupany: {room.max_occupany}</div>
           <div>${room.price_in_usd} USD</div>

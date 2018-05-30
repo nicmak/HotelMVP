@@ -2,8 +2,12 @@
 
 .navigation {
   padding: 20px;
-  width: 100%;
   text-align: center;
   font-size: 30px;
-  font-family: $font
+  font-family: $font;
+  color: #428500;
+  box-shadow: $shadow;
+  display: grid;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }

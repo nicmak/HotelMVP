@@ -6,9 +6,9 @@ class Nav extends Component {
   }
   render() {
     return (
-      <div className='navigation'>
+      <section className='navigation'>
         Welcome John
-      </div>
+      </section>
     )
   }
 }
